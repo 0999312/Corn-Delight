@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "corn_delight:cornbread_from_smoking"
+    ]
+  },
+  "criteria": {
+    "has_corn_delight:cornbread_batter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:cornbread_batter"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "corn_delight:cornbread_from_smoking"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_corn_delight:cornbread_batter",
+      "has_the_recipe"
+    ]
+  ]
+}
