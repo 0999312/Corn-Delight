@@ -1,4 +1,4 @@
-# Corn-Delight  
+# **Corn Delight**    
 ![Banner](https://s2.loli.net/2022/02/10/jpCoI1iSTamQNed.png)  
 ## :corn: **Introduction**  
 **Corn Delight** is an addon of **Farmer's Delight** that add corn and foods about corn.  
