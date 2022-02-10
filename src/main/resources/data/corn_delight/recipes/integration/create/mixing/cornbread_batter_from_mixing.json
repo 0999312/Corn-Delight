@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "forge:crops/corn"
+    },
+    {
+      "tag": "forge:crops/corn"
+    },
+    {
+      "fluidTag": "forge:milk",
+      "amount": 250
+    },
+    {
+      "tag": "forge:eggs"
+    }
+  ],
+  "results": [
+    {
+      "item": "corn_delight:cornbread_batter",
+      "count": 3
+    }
+  ]
+}

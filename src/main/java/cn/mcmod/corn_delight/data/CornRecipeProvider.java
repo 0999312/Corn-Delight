@@ -121,6 +121,21 @@ public class CornRecipeProvider extends AbstractRecipeProvider {
         .addIngredient(ForgeTags.MILK)
         .build(consumer);
         
+        CookingPotRecipeBuilder.cookingPotRecipe(ModItems.STUFFED_PUMPKIN_BLOCK.get(), 1, CookingRecipes.SLOW_COOKING, 0.5F, Items.PUMPKIN)
+        .addIngredient(ItemRegistry.CORNBREAD.get())
+        .addIngredient(ForgeTags.VEGETABLES)
+        .addIngredient(ModItems.TOMATO_SAUCE.get())
+        .addIngredient(ModItems.BROWN_MUSHROOM_COLONY.get())
+        .addIngredient(Items.SWEET_BERRIES)
+        .build(consumer,"stuffed_pumpkin_from_cornbread");
+        
+        CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistry.CORNBREAD_STUFFING.get(), 1, CookingRecipes.NORMAL_COOKING, 0.5F)
+        .addIngredient(ItemRegistry.CORNBREAD.get())
+        .addIngredient(ForgeTags.VEGETABLES)
+        .addIngredient(Items.BAKED_POTATO)
+        .addIngredient(Items.SWEET_BERRIES)
+        .build(consumer);
+        
     }
     
     private void foodSmeltingRecipes(String name, ItemLike ingredient, ItemLike result, float experience, Consumer<FinishedRecipe> consumer) {

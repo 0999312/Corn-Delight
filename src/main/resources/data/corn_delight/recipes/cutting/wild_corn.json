@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "corn_delight:wild_corn"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "result": [
+    {
+      "item": "corn_delight:corn_seeds",
+      "count": 1
+    },
+    {
+      "item": "farmersdelight:straw",
+      "chance": 0.5
+    }
+  ]
+}

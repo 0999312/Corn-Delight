@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "minecraft:block/crop",
   "textures": {
-    "cross": "corn_delight:block/corn_crop_stage0"
+    "crop": "corn_delight:block/corn_crop_stage0"
   }
 }

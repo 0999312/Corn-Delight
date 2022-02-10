@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "corn_delight:item/wild_corn"
+    "layer0": "corn_delight:block/wild_corn"
   }
 }
