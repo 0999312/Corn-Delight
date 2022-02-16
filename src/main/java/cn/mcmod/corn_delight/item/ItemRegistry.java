@@ -48,9 +48,25 @@ public class ItemRegistry {
                 .build())
     );
     
+    public static final RegistryObject<ItemFoodBase> GRILLED_CORN = register("grilled_corn", ()->food(
+            FoodInfo.builder().name("grilled_corn")
+            .amountAndCalories(6, 0.2F).water(0F)
+            .nutrients(2F, 0F, 2F, 0F, 0F).decayModifier(2F)
+            .heatCapacity(1F).cookingTemp(480F)
+            .build())
+    );
+    
+    public static final RegistryObject<ItemFoodBase> BOILED_CORN = register("boiled_corn", ()->food(
+            FoodInfo.builder().name("boiled_corn")
+            .amountAndCalories(6, 0.2F).water(5F)
+            .nutrients(2F, 0F, 2F, 0F, 0F).decayModifier(2F)
+            .heatCapacity(1F).cookingTemp(480F)
+            .build())
+    );
+    
     public static final RegistryObject<ItemFoodBase> POPCORN = register("popcorn", ()->food(
             FoodInfo.builder().name("popcorn")
-            .amountAndCalories(4, 0.5F).water(0F)
+            .amountAndCalories(3, 0.5F).water(0F)
             .nutrients(1F, 0F, 0F, 0F, 0F).decayModifier(0.5F)
             .heatCapacity(1F).cookingTemp(480F)
             .build())

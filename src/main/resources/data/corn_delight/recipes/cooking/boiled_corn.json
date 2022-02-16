@@ -1,0 +1,13 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:crops/corn"
+    }
+  ],
+  "result": {
+    "item": "corn_delight:boiled_corn"
+  },
+  "experience": 0.15,
+  "cookingtime": 100
+}

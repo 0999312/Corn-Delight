@@ -39,7 +39,7 @@ public class CornRecipeProvider extends AbstractRecipeProvider {
         foodSmeltingRecipes("popcorn", ItemRegistry.CORN_SEEDS.get(), ItemRegistry.POPCORN.get(), 0.5F, consumer);
         foodSmeltingRecipes("cornbread", ItemRegistry.CORNBREAD_BATTER.get(), ItemRegistry.CORNBREAD.get(), 0.5F, consumer);
         foodSmeltingRecipes("tortilla", ItemRegistry.RAW_TORTILLA.get(), ItemRegistry.TORTILLA.get(), 0.5F, consumer);
-        
+        foodSmeltingRecipes("grilled_corn", ItemRegistry.CORN.get(), ItemRegistry.GRILLED_CORN.get(), 0.5F, consumer);
         ShapelessRecipeBuilder.shapeless(ItemRegistry.CORN_SEEDS.get(), 1)
         .requires(CornForgeTags.CROPS_CORN)
         .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.CORN.get()))
@@ -96,7 +96,10 @@ public class CornRecipeProvider extends AbstractRecipeProvider {
         .requires(ItemRegistry.CORN_KERNAL_BAG.get())
         .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.CORN.get()))
         .save(consumer,"corn_seeds_from_bag");
-         
+        
+        CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistry.BOILED_CORN.get(), 1, CookingRecipes.FAST_COOKING, 0.15F)
+        .addIngredient(CornForgeTags.CROPS_CORN)
+        .build(consumer);
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistry.CREAMED_CORN.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
             .addIngredient(CornForgeTags.SEEDS_CORN)
             .addIngredient(CornForgeTags.SEEDS_CORN)

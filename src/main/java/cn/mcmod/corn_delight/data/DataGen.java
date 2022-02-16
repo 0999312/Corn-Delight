@@ -13,10 +13,8 @@ public class DataGen {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         if (event.includeClient()) {
-            generator.addProvider(
-                    new CornBlockStateProvider(generator, existingFileHelper));
-            generator.addProvider(
-                    new CornItemModelProvider(generator, existingFileHelper));
+            generator.addProvider(new CornBlockStateProvider(generator, existingFileHelper));
+            generator.addProvider(new CornItemModelProvider(generator, existingFileHelper));
             generator.addProvider(new CornLanguageProvider(generator));
         }
         if (event.includeServer()) {

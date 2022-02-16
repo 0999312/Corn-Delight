@@ -18,6 +18,8 @@ public class CornLanguageProvider extends AbstractLangProvider {
         add(BlockRegistry.CORN_CRATE.get(), "Corn Crate");
         add(BlockRegistry.WILD_CORN.get(), "Wild Corn");
         add(ItemRegistry.CORN.get(), "Maize");
+        add(ItemRegistry.GRILLED_CORN.get(), "Grilled Corn");
+        add(ItemRegistry.BOILED_CORN.get(), "Boiled Corn");
         add(ItemRegistry.CORN_SEEDS.get(), "Corn Kernel");
         add(ItemRegistry.CORN_SOUP.get(), "Corn Soup");
         add(ItemRegistry.CORNBREAD_BATTER.get(), "Cornbread Batter");
