@@ -12,6 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import cn.mcmod.corn_delight.block.BlockRegistry;
+import cn.mcmod.corn_delight.item.ComposterRegistry;
 import cn.mcmod.corn_delight.item.ItemRegistry;
 import cn.mcmod.corn_delight.worldgen.WildCornGeneration;
 
@@ -31,6 +32,7 @@ public class CornDelight {
     private void setup(final FMLCommonSetupEvent event){
         event.enqueueWork(() -> {
             WildCornGeneration.registerGeneration();
+            ComposterRegistry.registerCompost();
         });
     }
     

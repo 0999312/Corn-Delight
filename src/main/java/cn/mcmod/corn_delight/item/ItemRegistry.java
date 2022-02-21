@@ -156,7 +156,7 @@ public class ItemRegistry {
     }
     
     private static ItemFoodBase food(FoodInfo info, Item container) {
-        return new ItemFoodBase(CornDelight.defaultItemProperties().craftRemainder(container), info);
+        return new ItemFoodBase(CornDelight.defaultItemProperties().craftRemainder(container).stacksTo(16), info);
     }
 
     private static ItemFoodSeeds seed(Block block, FoodInfo info) {
