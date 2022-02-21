@@ -1,6 +1,6 @@
 package cn.mcmod.corn_delight;
 
-import net.minecraft.world.item.Item;
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -37,7 +37,7 @@ public class CornDelight {
     }
     
     public static Item.Properties defaultItemProperties() {
-        return new Item.Properties().tab(FarmersDelight.CREATIVE_TAB);
+        return new Item.Properties().tab(FarmersDelight.ITEM_GROUP);
     }
 
     public static Logger getLogger() {

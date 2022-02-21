@@ -2,15 +2,14 @@ package cn.mcmod.corn_delight.block;
 
 import cn.mcmod.corn_delight.CornDelight;
 import cn.mcmod.corn_delight.item.ItemRegistry;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.block.WildCropBlock;
+import vectorwing.farmersdelight.blocks.WildCropsBlock;
 
 public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, CornDelight.MODID);
@@ -19,7 +18,7 @@ public class BlockRegistry {
             () -> new CornCrop(Block.Properties.copy(Blocks.WHEAT), ItemRegistry.CORN_SEEDS));
     
     public static final RegistryObject<Block> WILD_CORN = BLOCKS.register("wild_corn",
-            () -> new WildCropBlock(MobEffects.SATURATION, 8,Block.Properties.copy(Blocks.TALL_GRASS)));
+            () -> new WildCropsBlock(Block.Properties.copy(Blocks.TALL_GRASS)));
     
     public static final RegistryObject<Block> CORN_CRATE = BLOCKS.register("corn_crate",
             () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));

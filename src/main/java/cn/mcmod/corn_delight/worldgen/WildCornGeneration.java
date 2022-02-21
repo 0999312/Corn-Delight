@@ -1,37 +1,34 @@
 package cn.mcmod.corn_delight.worldgen;
 
-import cn.mcmod.corn_delight.CornDelight;
+import com.google.common.collect.ImmutableSet;
+
 import cn.mcmod.corn_delight.CornDelightConfig;
 import cn.mcmod.corn_delight.block.BlockRegistry;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
-import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.RarityFilter;
-import vectorwing.farmersdelight.common.world.WildCropGeneration;
+import net.minecraft.block.Blocks;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
+import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.Features;
+import net.minecraft.world.gen.feature.IFeatureConfig;
 
 public class WildCornGeneration {
-    public static ConfiguredFeature<RandomPatchConfiguration, ?> FEATURE_PATCH_WILD_CORN;
-
-    public static PlacedFeature PATCH_WILD_CORN;
-    public static final BlockPos BLOCK_BELOW = new BlockPos(0, -1, 0);
-
+    
+    public static final BlockClusterFeatureConfig CORN_PATCH_CONFIG = (new BlockClusterFeatureConfig.Builder(
+            new SimpleBlockStateProvider(BlockRegistry.WILD_CORN.get().defaultBlockState()), new SimpleBlockPlacer())).tries(64).xspread(2).zspread(2).whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock())).noProjection().build();
+    
+    
+    public static final ConfiguredFeature<?, ?> PATCH_WILD_CORN = Feature.RANDOM_PATCH.configured(CORN_PATCH_CONFIG)
+            .decorated(Features.Placements.HEIGHTMAP_DOUBLE_SQUARE).chance(CornDelightConfig.CHANCE_WILD_CORN.get());
+    
     public static void registerGeneration() {
-        FEATURE_PATCH_WILD_CORN = Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
-                new ResourceLocation(CornDelight.MODID, "patch_wild_corn"),
-                Feature.RANDOM_PATCH
-                        .configured(WildCropGeneration.getWildCropConfiguration(BlockRegistry.WILD_CORN.get(), 64, 4,
-                                BlockPredicate.matchesBlock(Blocks.GRASS_BLOCK, BLOCK_BELOW))));
-        PATCH_WILD_CORN = Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(CornDelight.MODID, "patch_wild_corn"),
-                FEATURE_PATCH_WILD_CORN.placed(RarityFilter.onAverageOnceEvery(CornDelightConfig.CHANCE_WILD_CORN.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register("patch_wild_corn", PATCH_WILD_CORN);
+    }
+    
+    private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
+        return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
     }
 }

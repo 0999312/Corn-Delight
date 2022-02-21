@@ -7,17 +7,17 @@ import cn.mcmod.corn_delight.block.BlockRegistry;
 import cn.mcmod_mmf.mmlib.item.ItemFoodBase;
 import cn.mcmod_mmf.mmlib.item.ItemFoodSeeds;
 import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.FoodValues;
-import vectorwing.farmersdelight.common.registry.ModEffects;
+import vectorwing.farmersdelight.items.Foods;
+import vectorwing.farmersdelight.registry.ModEffects;
 
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CornDelight.MODID);
@@ -77,7 +77,7 @@ public class ItemRegistry {
             .amountAndCalories(7, 0.5F).water(25F)
             .nutrients(2F, 0F, 2F, 0F, 4F).decayModifier(5F)
             .heatCapacity(1F).cookingTemp(480F)
-            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
+            .addEffect(() -> new EffectInstance(ModEffects.COMFORT.get(), Foods.MEDIUM_DURATION, 0), 1.0F)
             .build(), Items.BOWL)
     );
     
@@ -86,7 +86,7 @@ public class ItemRegistry {
             .amountAndCalories(10, 0.9F).water(40F)
             .nutrients(2F, 0F, 2F, 0F, 4F).decayModifier(5F)
             .heatCapacity(1F).cookingTemp(480F)
-            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
+            .addEffect(() -> new EffectInstance(ModEffects.COMFORT.get(), Foods.MEDIUM_DURATION, 0), 1.0F)
             .build(), Items.BOWL)
     );
     
@@ -95,8 +95,8 @@ public class ItemRegistry {
             .amountAndCalories(2, 0.6F).water(40F)
             .nutrients(2F, 0F, 2F, 0F, 4F).decayModifier(5F)
             .heatCapacity(1F).cookingTemp(480F)
-            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
-            .addEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, FoodValues.MEDIUM_DURATION, 0), 1.0F)
+            .addEffect(() -> new EffectInstance(ModEffects.COMFORT.get(), Foods.MEDIUM_DURATION, 0), 1.0F)
+            .addEffect(() -> new EffectInstance(Effects.REGENERATION, Foods.MEDIUM_DURATION, 0), 1.0F)
             .build(), Items.GLASS_BOTTLE)
     );
     
@@ -137,7 +137,7 @@ public class ItemRegistry {
             .amountAndCalories(12, 0.8F).water(0F)
             .nutrients(4F, 0F, 4F, 4F, 4F).decayModifier(1F)
             .heatCapacity(1F).cookingTemp(480F)
-            .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, FoodValues.BURST_EFFECT, 0), 1.0F)
+            .addEffect(() -> new EffectInstance(Effects.DAMAGE_BOOST, Foods.BURST_EFFECT, 0), 1.0F)
             .build())
     );
     
@@ -146,8 +146,8 @@ public class ItemRegistry {
             .amountAndCalories(18, 1F).water(0F)
             .nutrients(4F, 0F, 4F, 4F, 4F).decayModifier(1F)
             .heatCapacity(1F).cookingTemp(480F)
-            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
-            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
+            .addEffect(() -> new EffectInstance(ModEffects.COMFORT.get(), Foods.MEDIUM_DURATION, 0), 1.0F)
+            .addEffect(() -> new EffectInstance(ModEffects.NOURISHED.get(), Foods.LONG_DURATION, 0), 1.0F)
             .build(), Items.BOWL)
     );
     

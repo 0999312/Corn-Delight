@@ -2,8 +2,8 @@ package cn.mcmod.corn_delight.item;
 
 import java.util.function.Supplier;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.block.ComposterBlock;
+import net.minecraft.item.Item;
 
 public class ComposterRegistry {
     public static void registerCompost() {

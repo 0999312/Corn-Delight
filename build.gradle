@@ -13,16 +13,15 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.0.3-1.18.1'
+version = '1.0.0-1.16.5'
 group = 'com.mcmod.corn_delight' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'corn_delight'
 
-// Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.18.1'
+    mappings channel: 'official', version: '1.16.5'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -91,15 +90,13 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.64'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.28'
 
-    implementation fg.deobf("cn.mcmod_mmf.mmlib:MMLib:1.0.0-1.18.1")
-    implementation fg.deobf("curse.maven:farmers-delight-398521:3615366")
-    compileOnly fg.deobf("mezz.jei:jei-1.18.1:9.2.3.84:api")
+    implementation fg.deobf("cn.mcmod_mmf.mmlib:MMLib:1.1.1-1.16.5")
+    implementation fg.deobf("curse.maven:farmers-delight-398521:3573686")
+    compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.150:api")
     // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.1:9.2.3.84")
-    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.18.1-61:api")
-    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.18.1-61")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.150")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
