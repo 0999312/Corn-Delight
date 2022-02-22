@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import cn.mcmod.corn_delight.CornDelight;
 import cn.mcmod.corn_delight.block.BlockRegistry;
+import cn.mcmod_mmf.mmlib.item.ItemDrinkBase;
 import cn.mcmod_mmf.mmlib.item.ItemFoodBase;
 import cn.mcmod_mmf.mmlib.item.ItemFoodSeeds;
 import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
@@ -90,13 +91,13 @@ public class ItemRegistry {
             .build(), Items.BOWL)
     );
     
-    public static final RegistryObject<ItemFoodBase> CREAMY_CORN_DRINK = register("creamy_corn_drink", ()->food(
+    public static final RegistryObject<ItemFoodBase> CREAMY_CORN_DRINK = register("creamy_corn_drink", ()->drink(
             FoodInfo.builder().name("creamy_corn_drink")
             .amountAndCalories(2, 0.6F).water(40F)
             .nutrients(2F, 0F, 2F, 0F, 4F).decayModifier(5F)
             .heatCapacity(1F).cookingTemp(480F)
-            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
-            .addEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, FoodValues.MEDIUM_DURATION, 0), 1.0F)
+            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
+            .addEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, FoodValues.SHORT_DURATION, 0), 1.0F)
             .build(), Items.GLASS_BOTTLE)
     );
     
@@ -146,7 +147,6 @@ public class ItemRegistry {
             .amountAndCalories(18, 1F).water(0F)
             .nutrients(4F, 0F, 4F, 4F, 4F).decayModifier(1F)
             .heatCapacity(1F).cookingTemp(480F)
-            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
             .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
             .build(), Items.BOWL)
     );
@@ -157,6 +157,10 @@ public class ItemRegistry {
     
     private static ItemFoodBase food(FoodInfo info, Item container) {
         return new ItemFoodBase(CornDelight.defaultItemProperties().craftRemainder(container).stacksTo(16), info);
+    }
+    
+    private static ItemDrinkBase drink(FoodInfo info, Item container) {
+        return new ItemDrinkBase(CornDelight.defaultItemProperties().craftRemainder(container).stacksTo(16), info);
     }
 
     private static ItemFoodSeeds seed(Block block, FoodInfo info) {
