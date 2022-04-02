@@ -36,6 +36,11 @@ public class CornRecipeProvider extends AbstractRecipeProvider {
                 .addResult(ModItems.STRAW.get())
                 .build(consumer);
         
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(ItemRegistry.TORTILLA.get()),
+                Ingredient.of(ForgeTags.TOOLS_KNIVES), ItemRegistry.TORTILLA_CHIP.get(), 3)
+                .addResultWithChance(ItemRegistry.TORTILLA_CHIP.get(), 0.1F)
+                .build(consumer);
+        
         foodSmeltingRecipes("popcorn", ItemRegistry.CORN_SEEDS.get(), ItemRegistry.POPCORN.get(), 0.5F, consumer);
         foodSmeltingRecipes("cornbread", ItemRegistry.CORNBREAD_BATTER.get(), ItemRegistry.CORNBREAD.get(), 0.5F, consumer);
         foodSmeltingRecipes("tortilla", ItemRegistry.RAW_TORTILLA.get(), ItemRegistry.TORTILLA.get(), 0.5F, consumer);
@@ -123,6 +128,18 @@ public class CornRecipeProvider extends AbstractRecipeProvider {
         )))
         .addIngredient(ForgeTags.MILK)
         .build(consumer);
+      CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistry.NACHOS_BLOCK.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.BOWL)
+              .addIngredient(ItemRegistry.TORTILLA_CHIP.get())
+              .addIngredient(ItemRegistry.TORTILLA_CHIP.get())
+              .addIngredient(Ingredient.fromValues(Stream.of(
+                    new Ingredient.TagValue(ForgeTags.COOKED_CHICKEN),
+                    new Ingredient.TagValue(ForgeTags.COOKED_PORK),
+                    new Ingredient.TagValue(ForgeTags.COOKED_BEEF),
+                    new Ingredient.TagValue(ForgeTags.COOKED_MUTTON)
+              )))
+              .addIngredient(ForgeTags.MILK)
+              .addIngredient(ModItems.TOMATO_SAUCE.get())
+              .build(consumer);
         
         CookingPotRecipeBuilder.cookingPotRecipe(ModItems.STUFFED_PUMPKIN_BLOCK.get(), 1, CookingRecipes.SLOW_COOKING, 0.5F, Items.PUMPKIN)
         .addIngredient(ItemRegistry.CORNBREAD.get())

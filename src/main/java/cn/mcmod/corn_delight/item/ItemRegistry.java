@@ -32,6 +32,9 @@ public class ItemRegistry {
     public static final RegistryObject<Item> CORN_KERNAL_BAG = ITEMS.register("corn_kernel_bag",
             () -> new BlockItem(BlockRegistry.CORN_KERNAL_BAG.get(), CornDelight.defaultItemProperties()));
     
+    public static final RegistryObject<Item> NACHOS_BLOCK = ITEMS.register("nachos_block",
+            () -> new BlockItem(BlockRegistry.NACHOS_BLOCK.get(), CornDelight.defaultItemProperties()));
+    
     public static final RegistryObject<ItemFoodBase> CORN = register("corn", ()->food(
             FoodInfo.builder().name("corn")
             .amountAndCalories(2, 0.2F).water(5F)
@@ -145,6 +148,23 @@ public class ItemRegistry {
     public static final RegistryObject<ItemFoodBase> CORNBREAD_STUFFING = register("cornbread_stuffing", ()->food(
             FoodInfo.builder().name("cornbread_stuffing")
             .amountAndCalories(18, 1F).water(0F)
+            .nutrients(4F, 0F, 4F, 4F, 4F).decayModifier(1F)
+            .heatCapacity(1F).cookingTemp(480F)
+            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
+            .build(), Items.BOWL)
+    );
+    
+    public static final RegistryObject<ItemFoodBase> TORTILLA_CHIP = register("tortilla_chip", ()->food(
+            FoodInfo.builder().name("tortilla_chip")
+            .amountAndCalories(1, 0.1F).water(0F)
+            .nutrients(2F, 0F, 0F, 0F, 0F).decayModifier(1F)
+            .heatCapacity(1F).cookingTemp(480F)
+            .build())
+    );
+    
+    public static final RegistryObject<ItemFoodBase> NACHOS = register("nachos_bowl", ()->food(
+            FoodInfo.builder().name("nachos_bowl")
+            .amountAndCalories(12, 1F).water(0F)
             .nutrients(4F, 0F, 4F, 4F, 4F).decayModifier(1F)
             .heatCapacity(1F).cookingTemp(480F)
             .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)

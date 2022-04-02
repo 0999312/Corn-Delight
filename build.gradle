@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.0.5-1.18.1'
+version = '1.0.6-1.18.1'
 group = 'com.mcmod.corn_delight' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'corn_delight'
 
@@ -91,9 +91,9 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.64'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.1.2'
 
-    implementation fg.deobf("cn.mcmod_mmf.mmlib:MMLib:1.0.0-1.18.1")
+    implementation fg.deobf("cn.mcmod_mmf.mmlib:MMLib:1.0.2-1.18.1")
     implementation fg.deobf("curse.maven:farmers-delight-398521:3615366")
     compileOnly fg.deobf("mezz.jei:jei-1.18.1:9.2.3.84:api")
     // at runtime, use the full JEI jar

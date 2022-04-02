@@ -26,4 +26,7 @@ public class BlockRegistry {
     
     public static final RegistryObject<Block> CORN_KERNAL_BAG = BLOCKS.register("corn_kernel_bag",
             () -> new Block(Block.Properties.copy(Blocks.WHITE_WOOL)));
+    
+    public static final RegistryObject<Block> NACHOS_BLOCK = BLOCKS.register("nachos_block",
+            () -> new NachosBlock(Block.Properties.copy(Blocks.CAKE), ItemRegistry.NACHOS::get, true));
 }
