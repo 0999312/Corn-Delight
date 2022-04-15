@@ -16,7 +16,7 @@ public class ClientEvents {
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.WILD_CORN.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.CORN_CROP.get(), RenderType.cutout());
-
+            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.POPCORN_BOX.get(), RenderType.cutout());
         });
     }
 }

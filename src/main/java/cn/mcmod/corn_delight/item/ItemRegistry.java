@@ -35,6 +35,9 @@ public class ItemRegistry {
     public static final RegistryObject<Item> NACHOS_BLOCK = ITEMS.register("nachos_block",
             () -> new BlockItem(BlockRegistry.NACHOS_BLOCK.get(), CornDelight.defaultItemProperties()));
     
+    public static final RegistryObject<Item> POPCORN_BOX = ITEMS.register("popcorn_box",
+            () -> new BlockItem(BlockRegistry.POPCORN_BOX.get(), CornDelight.defaultItemProperties()));
+    
     public static final RegistryObject<ItemFoodBase> CORN = register("corn", ()->food(
             FoodInfo.builder().name("corn")
             .amountAndCalories(2, 0.2F).water(5F)
@@ -72,6 +75,14 @@ public class ItemRegistry {
             FoodInfo.builder().name("popcorn")
             .amountAndCalories(3, 0.5F).water(0F)
             .nutrients(1F, 0F, 0F, 0F, 0F).decayModifier(0.5F)
+            .heatCapacity(1F).cookingTemp(480F)
+            .build())
+    );
+    
+    public static final RegistryObject<ItemFoodBase> CARAMEL_POPCORN = register("caramel_popcorn", ()->food(
+            FoodInfo.builder().name("caramel_popcorn")
+            .amountAndCalories(5, 0.6F).water(0F)
+            .nutrients(3F, 0F, 0F, 0F, 0F).decayModifier(0.5F)
             .heatCapacity(1F).cookingTemp(480F)
             .build())
     );
@@ -118,6 +129,22 @@ public class ItemRegistry {
             .nutrients(2F, 0F, 2F, 0F, 4F).decayModifier(1F)
             .heatCapacity(1F).cookingTemp(480F)
             .build())
+    );
+    
+    public static final RegistryObject<ItemFoodBase> CORN_DOG = register("corn_dog", ()->food(
+            FoodInfo.builder().name("corn_dog")
+            .amountAndCalories(8, 0.9F).water(0F)
+            .nutrients(4F, 0F, 4F, 4F, 4F).decayModifier(1F)
+            .heatCapacity(1F).cookingTemp(480F)
+            .build(), Items.STICK)
+    );
+    
+    public static final RegistryObject<ItemFoodBase> CLASSIC_CORN_DOG = register("classic_corn_dog", ()->food(
+            FoodInfo.builder().name("classic_corn_dog")
+            .amountAndCalories(10, 0.9F).water(0F)
+            .nutrients(4F, 0F, 5F, 4F, 4F).decayModifier(1F)
+            .heatCapacity(1F).cookingTemp(480F)
+            .build(), Items.STICK)
     );
     
     public static final RegistryObject<ItemFoodBase> RAW_TORTILLA = register("tortilla_raw", ()->food(

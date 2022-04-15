@@ -5,14 +5,11 @@
       "tag": "forge:seeds/corn"
     },
     {
-      "tag": "forge:seeds/corn"
-    },
-    {
-      "tag": "forge:milk"
+      "item": "minecraft:sugar"
     }
   ],
   "result": {
-    "item": "corn_delight:creamed_corn"
+    "item": "corn_delight:caramel_popcorn"
   },
   "experience": 0.35,
   "cookingtime": 200

@@ -1,6 +1,7 @@
 {
   "block.corn_delight.corn_crate": "箱装玉米",
   "block.corn_delight.corn_kernel_bag": "袋装玉米粒",
+  "block.corn_delight.popcorn_box": "爆米花桶",
   "block.corn_delight.corn_crop": "玉米作物",
   "block.corn_delight.wild_corn": "野生玉米",
   "item.corn_delight.grilled_corn": "烤玉米",
@@ -19,5 +20,9 @@
   "block.corn_delight.nachos_block": "烤奶酪辣味玉米片",
   "item.corn_delight.nachos_bowl": "烤奶酪辣味玉米片",
   "item.corn_delight.tortilla_chip": "墨西哥玉米片",
-  "item.corn_delight.tortilla_raw": "生玉米面饼"
+  "item.corn_delight.tortilla_raw": "生玉米面饼",
+  "item.corn_delight.classic_corn_dog": "经典玉米热狗",
+  "item.corn_delight.corn_dog": "玉米热狗",
+  "item.corn_delight.caramel_popcorn": "焦糖爆米花",
+  "corn_delight.block.popcorn.bearhand": "你需要空手去抓爆米花。"
 }

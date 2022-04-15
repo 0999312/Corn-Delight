@@ -5,6 +5,7 @@ import java.util.Set;
 import com.google.common.collect.Sets;
 
 import cn.mcmod.corn_delight.worldgen.WildCornGeneration;
+import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -50,7 +51,7 @@ public class CornCommonEvent {
         Biome.ClimateSettings climate = event.getClimate();
         if (climate.temperature > 0.0F && climate.temperature <= 1.0F) {
             if (CornDelightConfig.GENERATE_WILD_CORN.get()) {
-                builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCornGeneration.PATCH_WILD_CORN);
+                builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, Holder.direct(WildCornGeneration.PATCH_WILD_CORN.get()));
             }
         }
     }

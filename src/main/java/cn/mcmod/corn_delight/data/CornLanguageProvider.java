@@ -16,7 +16,9 @@ public class CornLanguageProvider extends AbstractLangProvider {
     protected void addTranslations() {
         add(BlockRegistry.CORN_CROP.get(), "Corn Crop");
         add(BlockRegistry.CORN_CRATE.get(), "Corn Crate");
+        add(BlockRegistry.CORN_KERNAL_BAG.get(), "Bag of Corn Kernel");
         add(BlockRegistry.NACHOS_BLOCK.get(), "Nachos");
+        add(BlockRegistry.POPCORN_BOX.get(), "Popcorn Bucket");
         add(BlockRegistry.WILD_CORN.get(), "Wild Corn");
         add(ItemRegistry.CORN.get(), "Maize");
         add(ItemRegistry.GRILLED_CORN.get(), "Grilled Corn");
@@ -33,5 +35,9 @@ public class CornLanguageProvider extends AbstractLangProvider {
         add(ItemRegistry.TACO.get(), "Taco");
         add(ItemRegistry.TORTILLA_CHIP.get(), "Tortilla Chip");
         add(ItemRegistry.NACHOS.get(), "Nachos");
+        
+        add(ItemRegistry.CARAMEL_POPCORN.get(), "Caramel Popcorn");
+        add(ItemRegistry.CORN_DOG.get(), "Corn Dog");
+        add(ItemRegistry.CLASSIC_CORN_DOG.get(), "Classic Corn Dog");
     }
 }

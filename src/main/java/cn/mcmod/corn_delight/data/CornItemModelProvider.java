@@ -16,7 +16,8 @@ public class CornItemModelProvider extends AbstractItemModelProvider {
     @Override
     protected void registerModels() {
         ItemRegistry.ITEMS.getEntries().forEach((item) -> {
-            if(item != ItemRegistry.CORN_CRATE && item != ItemRegistry.CORN_KERNAL_BAG && item != ItemRegistry.WILD_CORN)
+            if(item != ItemRegistry.CORN_CRATE && item != ItemRegistry.CORN_KERNAL_BAG && item != ItemRegistry.WILD_CORN
+                    && item != ItemRegistry.POPCORN_BOX)
                 normalItem(item);
         });
         itemBlock(BlockRegistry.CORN_CRATE);

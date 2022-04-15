@@ -58,6 +58,21 @@ public class CornRecipeProvider extends AbstractRecipeProvider {
             .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.CORN.get()))
             .save(consumer);
         
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.CARAMEL_POPCORN.get(), 1)
+        .requires(ItemRegistry.POPCORN.get())
+        .requires(Items.SUGAR)
+        .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.POPCORN.get()))
+        .save(consumer);
+        
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.POPCORN_BOX.get(), 1)
+        .requires(ItemRegistry.CARAMEL_POPCORN.get())
+        .requires(ItemRegistry.CARAMEL_POPCORN.get())
+        .requires(ItemRegistry.CARAMEL_POPCORN.get())
+        .requires(ItemRegistry.CARAMEL_POPCORN.get())
+        .requires(Items.PAPER)
+        .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.CARAMEL_POPCORN.get()))
+        .save(consumer);
+        
         ShapelessRecipeBuilder.shapeless(ItemRegistry.TACO.get(), 1)
         .requires(CornForgeTags.TORTILLA)
         .requires(ForgeTags.SALAD_INGREDIENTS)
@@ -117,6 +132,11 @@ public class CornRecipeProvider extends AbstractRecipeProvider {
         .addIngredient(Items.SUGAR)
         .build(consumer);
         
+        CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistry.CARAMEL_POPCORN.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+        .addIngredient(CornForgeTags.SEEDS_CORN)
+        .addIngredient(Items.SUGAR)
+        .build(consumer);
+        
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistry.CORN_SOUP.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
         .addIngredient(CornForgeTags.CROPS_CORN)
         .addIngredient(ForgeTags.SALAD_INGREDIENTS)
@@ -156,6 +176,26 @@ public class CornRecipeProvider extends AbstractRecipeProvider {
         .addIngredient(Items.SWEET_BERRIES)
         .build(consumer);
         
+        CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistry.CORN_DOG.get(), 1, CookingRecipes.NORMAL_COOKING, 0.5F)
+        .addIngredient(ItemRegistry.CORNBREAD_STUFFING.get())
+        .addIngredient(Ingredient.fromValues(Stream.of(
+                new Ingredient.TagValue(ForgeTags.COOKED_CHICKEN),
+                new Ingredient.TagValue(ForgeTags.COOKED_PORK),
+                new Ingredient.TagValue(ForgeTags.COOKED_BEEF),
+                new Ingredient.TagValue(ForgeTags.COOKED_MUTTON)
+          )))
+        .build(consumer);
+        
+        CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistry.CLASSIC_CORN_DOG.get(), 1, CookingRecipes.NORMAL_COOKING, 0.5F)
+        .addIngredient(ItemRegistry.CORNBREAD_STUFFING.get())
+        .addIngredient(Ingredient.fromValues(Stream.of(
+                new Ingredient.TagValue(ForgeTags.COOKED_CHICKEN),
+                new Ingredient.TagValue(ForgeTags.COOKED_PORK),
+                new Ingredient.TagValue(ForgeTags.COOKED_BEEF),
+                new Ingredient.TagValue(ForgeTags.COOKED_MUTTON)
+          )))
+        .addIngredient(ModItems.TOMATO_SAUCE.get())
+        .build(consumer);
     }
     
     private void foodSmeltingRecipes(String name, ItemLike ingredient, ItemLike result, float experience, Consumer<FinishedRecipe> consumer) {

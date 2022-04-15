@@ -29,4 +29,7 @@ public class BlockRegistry {
     
     public static final RegistryObject<Block> NACHOS_BLOCK = BLOCKS.register("nachos_block",
             () -> new NachosBlock(Block.Properties.copy(Blocks.CAKE), ItemRegistry.NACHOS::get, true));
+    
+    public static final RegistryObject<Block> POPCORN_BOX = BLOCKS.register("popcorn_box",
+            PopcornBoxBlock::new);
 }

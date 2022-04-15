@@ -1,21 +1,16 @@
 package cn.mcmod.corn_delight;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
+import cn.mcmod_mmf.mmlib.utils.TagUtils;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.common.Tags.IOptionalNamedTag;
 
 public class CornForgeTags {
-    public static final IOptionalNamedTag<Item> CROPS_CORN = forgeItemTag("crops/corn");
-    public static final IOptionalNamedTag<Item> GRAIN_CORN = forgeItemTag("grain/corn");
-    public static final IOptionalNamedTag<Item> BREAD_CORN = forgeItemTag("bread/corn");
-    public static final IOptionalNamedTag<Item> SEEDS_CORN = forgeItemTag("seeds/corn");
-    public static final IOptionalNamedTag<Item> VEGETABLES_CORN = forgeItemTag("vegetables/corn");
-    public static final IOptionalNamedTag<Item> TORTILLA = forgeItemTag("tortilla");
-    public static final IOptionalNamedTag<Item> POPCORN = forgeItemTag("popcorn");
-    
-    private static IOptionalNamedTag<Item> forgeItemTag(String path) {
-        return ItemTags.createOptional(new ResourceLocation("forge", path));
-    }
+    public static final TagKey<Item> CROPS_CORN = TagUtils.forgeItemTag("crops/corn");
+    public static final TagKey<Item> GRAIN_CORN = TagUtils.forgeItemTag("grain/corn");
+    public static final TagKey<Item> BREAD_CORN = TagUtils.forgeItemTag("bread/corn");
+    public static final TagKey<Item> SEEDS_CORN = TagUtils.forgeItemTag("seeds/corn");
+    public static final TagKey<Item> VEGETABLES_CORN = TagUtils.forgeItemTag("vegetables/corn");
+    public static final TagKey<Item> TORTILLA = TagUtils.forgeItemTag("tortilla");
+    public static final TagKey<Item> POPCORN = TagUtils.forgeItemTag("popcorn");
     
 }

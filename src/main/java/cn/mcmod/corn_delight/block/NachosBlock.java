@@ -26,4 +26,5 @@ public class NachosBlock extends FeastBlock {
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
         return state.getValue(SERVINGS) == 0 ? PLATE_SHAPE : NACHOS_SHAPE;
     }
+
 }

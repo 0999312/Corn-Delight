@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "item": "corn_delight:cornbread_stuffing"
+    },
+    [
+      {
+        "tag": "forge:cooked_chicken"
+      },
+      {
+        "tag": "forge:cooked_pork"
+      },
+      {
+        "tag": "forge:cooked_beef"
+      },
+      {
+        "tag": "forge:cooked_mutton"
+      }
+    ]
+  ],
+  "result": {
+    "item": "corn_delight:corn_dog"
+  },
+  "experience": 0.5,
+  "cookingtime": 200
+}

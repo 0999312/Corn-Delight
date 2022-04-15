@@ -8,12 +8,14 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
-apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
+plugins {
+    id 'eclipse'
+    id 'maven-publish'
+}
+apply plugin: 'net.minecraftforge.gradle'
 
-version = '1.0.7-1.18.1'
+version = '1.0.1-1.18.2'
 group = 'com.mcmod.corn_delight' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'corn_delight'
 
@@ -22,7 +24,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.18.1'
+    mappings channel: 'official', version: '1.18.2'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -91,15 +93,15 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.1.2'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.0.44'
 
-    implementation fg.deobf("cn.mcmod_mmf.mmlib:MMLib:1.0.2-1.18.1")
-    implementation fg.deobf("curse.maven:farmers-delight-398521:3615366")
-    compileOnly fg.deobf("mezz.jei:jei-1.18.1:9.2.3.84:api")
+    implementation fg.deobf("cn.mcmod_mmf.mmlib:MMLib:1.0.0-1.18.2")
+    implementation fg.deobf("curse.maven:farmers-delight-398521:3739914")
+    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.4.166:api")
     // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.1:9.2.3.84")
-    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.18.1-61:api")
-    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.18.1-61")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.4.166")
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.18.2-67:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.18.2-67")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
