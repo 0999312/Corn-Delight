@@ -4,13 +4,17 @@
   "block.corn_delight.corn_kernel_bag": "Sacco di chicchi di mais",
   "block.corn_delight.nachos_block": "Nachos",
   "block.corn_delight.wild_corn": "Granoturco selvatico",
-  "item.corn_delight.boiled_corn": "Granoturco Bollito",
+  "block.corn_delight.popcorn_box": "Cesto di popcorn",
+  "item.corn_delight.boiled_corn": "Granoturco bollito",
+  "item.corn_delight.caramel_popcorn": "Popcorn caramellati",
+  "item.corn_delight.classic_corn_dog": "Corn Dog classico",
   "item.corn_delight.corn": "Granoturco",
+  "item.corn_delight.corn_dog": "Corn Dog",
   "item.corn_delight.corn_seeds": "Chicchi di mais",
   "item.corn_delight.corn_soup": "Zuppa di mais",
-  "item.corn_delight.cornbread_stuffing": "Ripieno di pane di mais",
   "item.corn_delight.cornbread": "Pane di mais",
   "item.corn_delight.cornbread_batter": "Pastella di pane di mais",
+  "item.corn_delight.cornbread_stuffing": "Ripieno di pane di mais",
   "item.corn_delight.creamed_corn": "Mais mantecato",
   "item.corn_delight.creamy_corn_drink": "Bevanda cremosa di mais",
   "item.corn_delight.grilled_corn": "Granoturco Grigliato",
@@ -19,5 +23,6 @@
   "item.corn_delight.taco": "Taco",
   "item.corn_delight.tortilla": "Tortilla",
   "item.corn_delight.tortilla_chip": "Patatine di Mais",
-  "item.corn_delight.tortilla_raw": "Tortilla cruda"
+  "item.corn_delight.tortilla_raw": "Tortilla cruda",
+  "corn_delight.block.popcorn.bearhand": "Puoi prendere i popcorn solo con le mani libere."
 }
