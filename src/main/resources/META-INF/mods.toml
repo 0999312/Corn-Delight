@@ -8,8 +8,7 @@ version="${file.jarVersion}"
 displayName="Corn Delight"
 logoFile="logo.png"
 credits="Farmer's Delight Group"
-authors="MCMOD Modding Group" #optional
-# The description text for the mod (multi line!) (#mandatory)
+authors="MCMOD Modding Group"
 description='''
 Do you like Corn?
 Now Corn in Farmer's Delight!
@@ -32,13 +31,13 @@ Now Corn in Farmer's Delight!
 [[dependencies.corn_delight]]
     modId="farmersdelight"
     mandatory=true
-    versionRange="[1.18.2-1.0.4,)"
+    versionRange="[1.18.2-1.1.0,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.corn_delight]]
     modId="mmlib"
     mandatory=true
-    versionRange="[1.0.0-1.18.2,)"
+    versionRange="[1.0.1-1.18.2,)"
     ordering="AFTER"
     side="BOTH"

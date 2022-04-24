@@ -9,6 +9,7 @@ import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
 
 import cn.mcmod.corn_delight.data.loot.CornBlockLoot;
+import cn.mcmod.corn_delight.data.loot.CornChestLoot;
 import cn.mcmod_mmf.mmlib.data.AbstractLootTableProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -24,7 +25,10 @@ public class CornLootTableProvider extends AbstractLootTableProvider {
     }
 
     private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>>
-        tables = ImmutableList.of(Pair.of(CornBlockLoot::new, LootContextParamSets.BLOCK));
+        tables = ImmutableList.of(
+                Pair.of(CornBlockLoot::new, LootContextParamSets.BLOCK),
+                Pair.of(CornChestLoot::new, LootContextParamSets.CHEST)
+        );
     
     @Override
     public String getName() {

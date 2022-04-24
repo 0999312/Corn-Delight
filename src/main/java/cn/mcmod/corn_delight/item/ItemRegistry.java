@@ -168,7 +168,7 @@ public class ItemRegistry {
             .amountAndCalories(12, 0.8F).water(0F)
             .nutrients(4F, 0F, 4F, 4F, 4F).decayModifier(1F)
             .heatCapacity(1F).cookingTemp(480F)
-            .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, FoodValues.BURST_EFFECT, 0), 1.0F)
+            .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, FoodValues.BRIEF_DURATION, 0), 1.0F)
             .build())
     );
     

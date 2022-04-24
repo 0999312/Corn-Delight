@@ -22,7 +22,8 @@ public class DataGen {
             generator.addProvider(block_tag);
             generator.addProvider(new CornItemTagsProvider(generator, block_tag, existingFileHelper));
             generator.addProvider(new CornLootTableProvider(generator));
-            generator.addProvider(new CornRecipeProvider(generator));
+            generator.addProvider(new CornGLMProvider(generator));
+//            generator.addProvider(new CornRecipeProvider(generator));
         }
     }
 }

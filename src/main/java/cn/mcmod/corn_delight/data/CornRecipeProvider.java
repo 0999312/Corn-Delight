@@ -36,7 +36,7 @@ public class CornRecipeProvider extends AbstractRecipeProvider {
                 .addResult(ModItems.STRAW.get())
                 .build(consumer);
         
-        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(ItemRegistry.TORTILLA.get()),
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(CornForgeTags.TORTILLA),
                 Ingredient.of(ForgeTags.TOOLS_KNIVES), ItemRegistry.TORTILLA_CHIP.get(), 3)
                 .addResultWithChance(ItemRegistry.TORTILLA_CHIP.get(), 0.1F)
                 .build(consumer);

@@ -35,7 +35,7 @@ public class CornLanguageProvider extends AbstractLangProvider {
         add(ItemRegistry.TACO.get(), "Taco");
         add(ItemRegistry.TORTILLA_CHIP.get(), "Tortilla Chip");
         add(ItemRegistry.NACHOS.get(), "Nachos");
-        
+        add(ItemRegistry.CORNBREAD_STUFFING.get(), "Cornbread Stuffing");
         add(ItemRegistry.CARAMEL_POPCORN.get(), "Caramel Popcorn");
         add(ItemRegistry.CORN_DOG.get(), "Corn Dog");
         add(ItemRegistry.CLASSIC_CORN_DOG.get(), "Classic Corn Dog");
