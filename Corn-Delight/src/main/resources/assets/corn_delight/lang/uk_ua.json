@@ -1,0 +1,20 @@
+{
+  "block.corn_delight.corn_crate": "Ящик з кукурудзою",
+  "block.corn_delight.corn_kernel_bag": "Мішок кукурудзяного насіння",
+  "block.corn_delight.corn_crop": "Урожай кукурудзи",
+  "block.corn_delight.wild_corn": "Дика кукурудза",
+  "item.corn_delight.grilled_corn": "Смажена кукурудза",
+  "item.corn_delight.boiled_corn": "Варена кукурудза",
+  "item.corn_delight.corn": "Кукурудза",
+  "item.corn_delight.corn_seeds": "Насіння кукурудзи",
+  "item.corn_delight.corn_soup": "Кукурудзяний суп",
+  "item.corn_delight.cornbread": "Кукурудзяний хліб",
+  "item.corn_delight.cornbread_stuffing": "Суп із кукурудзяного хліба",
+  "item.corn_delight.cornbread_batter": "Суп із кукурудзяного хліба",
+  "item.corn_delight.creamed_corn": "Кукурудза з вершками",
+  "item.corn_delight.creamy_corn_drink": "Напій із кукурудзи з вершками",
+  "item.corn_delight.popcorn": "Попкорн",
+  "item.corn_delight.taco": "Тако",
+  "item.corn_delight.tortilla": "Тортиля",
+  "item.corn_delight.tortilla_raw": "Сира тортил'я"
+}
