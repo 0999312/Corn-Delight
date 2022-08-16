@@ -174,7 +174,7 @@ public class ItemRegistry {
     
     public static final RegistryObject<ItemFoodBase> CORNBREAD_STUFFING = register("cornbread_stuffing", ()->food(
             FoodInfo.builder().name("cornbread_stuffing")
-            .amountAndCalories(18, 1F).water(0F)
+            .amountAndCalories(12, 1F).water(0F)
             .nutrients(4F, 0F, 4F, 4F, 4F).decayModifier(1F)
             .heatCapacity(1F).cookingTemp(480F)
             .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
