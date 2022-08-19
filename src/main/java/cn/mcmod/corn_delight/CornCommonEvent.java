@@ -1,7 +1,6 @@
 package cn.mcmod.corn_delight;
 
 import cn.mcmod.corn_delight.worldgen.WildCornGeneration;
-import net.minecraft.core.Holder;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
@@ -18,7 +17,7 @@ public class CornCommonEvent {
         Biome.ClimateSettings climate = event.getClimate();
         if (climate.temperature > 0.0F && climate.temperature <= 1.0F) {
             if (CornDelightConfig.GENERATE_WILD_CORN.get()) {
-                builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, Holder.direct(WildCornGeneration.PATCH_WILD_CORN.get()));
+                builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCornGeneration.PATCH_WILD_CORN.getHolder().get());  
             }
         }
     }

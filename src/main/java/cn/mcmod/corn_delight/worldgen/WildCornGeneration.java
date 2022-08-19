@@ -8,7 +8,6 @@ import cn.mcmod.corn_delight.CornDelight;
 import cn.mcmod.corn_delight.CornDelightConfig;
 import cn.mcmod.corn_delight.block.BlockRegistry;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Holder;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.tags.BlockTags;
@@ -45,8 +44,8 @@ public class WildCornGeneration {
         return new ConfiguredFeature<>(Feature.RANDOM_PATCH, WildCropGeneration.getWildCropConfiguration(wildCrop.get(),
                 64, 4, BlockPredicate.matchesTag(blockTag, BLOCK_BELOW)));
     }
-    private static PlacedFeature wildCropPatch(Supplier<ConfiguredFeature<?, ?>> feature,
+    private static PlacedFeature wildCropPatch(RegistryObject<ConfiguredFeature<?, ?>> feature,
             PlacementModifier... modifiers) {
-        return new PlacedFeature(Holder.direct(feature.get()), Lists.newArrayList(modifiers));
+        return new PlacedFeature(feature.getHolder().get(), Lists.newArrayList(modifiers));
     }
 }
