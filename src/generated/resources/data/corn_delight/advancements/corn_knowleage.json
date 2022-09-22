@@ -1,0 +1,187 @@
+{
+  "parent": "corn_delight:corn",
+  "display": {
+    "icon": {
+      "item": "corn_delight:corn_crate"
+    },
+    "title": {
+      "translate": "corn_delight.advancement.corn_knowleage"
+    },
+    "description": {
+      "translate": "corn_delight.advancement.corn_knowleage.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "classic_corndog": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:classic_corn_dog"
+            ]
+          }
+        ]
+      }
+    },
+    "taco": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:taco"
+            ]
+          }
+        ]
+      }
+    },
+    "nachos": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:nachos_bowl"
+            ]
+          }
+        ]
+      }
+    },
+    "corn_soup": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:corn_soup"
+            ]
+          }
+        ]
+      }
+    },
+    "creamed_corn": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:creamed_corn"
+            ]
+          }
+        ]
+      }
+    },
+    "boiled_corn": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:boiled_corn"
+            ]
+          }
+        ]
+      }
+    },
+    "grilled_corn": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:grilled_corn"
+            ]
+          }
+        ]
+      }
+    },
+    "corn_drink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:creamy_corn_drink"
+            ]
+          }
+        ]
+      }
+    },
+    "popcorn": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:caramel_popcorn"
+            ]
+          }
+        ]
+      }
+    },
+    "cornbread": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:cornbread"
+            ]
+          }
+        ]
+      }
+    },
+    "cornbread_stuffing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:cornbread_stuffing"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "classic_corndog"
+    ],
+    [
+      "taco"
+    ],
+    [
+      "nachos"
+    ],
+    [
+      "corn_soup"
+    ],
+    [
+      "creamed_corn"
+    ],
+    [
+      "boiled_corn"
+    ],
+    [
+      "grilled_corn"
+    ],
+    [
+      "corn_drink"
+    ],
+    [
+      "popcorn"
+    ],
+    [
+      "cornbread"
+    ],
+    [
+      "cornbread_stuffing"
+    ]
+  ]
+}

@@ -15,7 +15,7 @@ plugins {
 }
 apply plugin: 'net.minecraftforge.gradle'
 
-version = '1.0.5-1.18.2'
+version = '1.0.6-1.18.2'
 group = 'com.mcmod.corn_delight' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'corn_delight'
 
@@ -86,17 +86,14 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
-    flatDir {
-        dir 'libs'
-    }
+	maven { url = "https://raw.github.com/0999312/MMMaven/main/repository" }
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.44'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.80'
 
-    implementation fg.deobf("cn.mcmod_mmf.mmlib:MMLib:1.0.1-1.18.2")
-    implementation fg.deobf("curse.maven:farmers-delight-398521:3765351")
+    implementation fg.deobf("cn.mcmod_mmf.mmlib:MMLib:1.1.3-1.18.2")
+    implementation fg.deobf("curse.maven:farmers-delight-398521:3999153")
     compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.4.166:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.4.166")

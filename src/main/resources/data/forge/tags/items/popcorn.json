@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "corn_delight:popcorn"
+    "corn_delight:popcorn",
+    {
+      "id": "culturaldelights:popcorn",
+      "required": false
+    }
   ]
 }

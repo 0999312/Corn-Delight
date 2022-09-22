@@ -41,7 +41,7 @@ public class WildCornGeneration {
     
 
     private static ConfiguredFeature<?, ?> wildCropFeature(Supplier<Block> wildCrop, TagKey<Block> blockTag) {
-        return new ConfiguredFeature<>(Feature.RANDOM_PATCH, WildCropGeneration.getWildCropConfiguration(wildCrop.get(),
+        return new ConfiguredFeature<>(Feature.RANDOM_PATCH, WildCropGeneration.randomPatchConfig(wildCrop.get(),
                 64, 4, BlockPredicate.matchesTag(blockTag, BLOCK_BELOW)));
     }
     private static PlacedFeature wildCropPatch(RegistryObject<ConfiguredFeature<?, ?>> feature,

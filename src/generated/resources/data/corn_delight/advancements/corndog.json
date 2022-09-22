@@ -1,0 +1,37 @@
+{
+  "parent": "corn_delight:corn",
+  "display": {
+    "icon": {
+      "item": "corn_delight:corn_dog"
+    },
+    "title": {
+      "translate": "corn_delight.advancement.corndog"
+    },
+    "description": {
+      "translate": "corn_delight.advancement.corndog.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:corn_dog"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item"
+    ]
+  ]
+}

@@ -35,8 +35,8 @@ public class PopcornBoxBlock extends FeastBlock {
         }
         return this.takeServing(worldIn, pos, state, player, handIn);
     }
-
-    private InteractionResult takeServing(LevelAccessor worldIn, BlockPos pos, BlockState state, Player player, InteractionHand handIn) {
+    
+    public InteractionResult takeServing(LevelAccessor worldIn, BlockPos pos, BlockState state, Player player, InteractionHand handIn) {
         int servings = state.getValue(SERVINGS);
 
         if (servings == 0) {
@@ -45,7 +45,7 @@ public class PopcornBoxBlock extends FeastBlock {
             return InteractionResult.SUCCESS;
         }
 
-        ItemStack serving = this.getServingItem();
+        ItemStack serving = this.getServingItem(state);
         ItemStack heldStack = player.getItemInHand(handIn);
 
         if (servings > 0) {
