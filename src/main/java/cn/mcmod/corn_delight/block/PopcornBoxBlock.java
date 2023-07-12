@@ -3,7 +3,7 @@ package cn.mcmod.corn_delight.block;
 import cn.mcmod.corn_delight.CornDelight;
 import cn.mcmod.corn_delight.item.ItemRegistry;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -63,7 +63,7 @@ public class PopcornBoxBlock extends FeastBlock {
                 worldIn.playSound(null, pos, SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.BLOCKS, 1.0F, 1.0F);
                 return InteractionResult.SUCCESS;
             } else {
-                player.displayClientMessage(new TranslatableComponent(CornDelight.MODID+".block.popcorn.bearhand", serving.getContainerItem().getHoverName()), true);
+                player.displayClientMessage(Component.translatable(CornDelight.MODID+".block.popcorn.bearhand", serving.getCraftingRemainingItem().getHoverName()), true);
             }
         }
         return InteractionResult.PASS;

@@ -6,7 +6,6 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -22,7 +21,7 @@ public class BlockRegistry {
             () -> new WildCropBlock(MobEffects.SATURATION, 8,Block.Properties.copy(Blocks.TALL_GRASS)));
     
     public static final RegistryObject<Block> CORN_CRATE = BLOCKS.register("corn_crate",
-            () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+            () -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     
     public static final RegistryObject<Block> CORN_KERNAL_BAG = BLOCKS.register("corn_kernel_bag",
             () -> new Block(Block.Properties.copy(Blocks.WHITE_WOOL)));

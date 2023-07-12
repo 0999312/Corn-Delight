@@ -5,10 +5,10 @@
       "item": "corn_delight:corn_crate"
     },
     "title": {
-      "translate": "corn_delight.advancement.corn_knowleage"
+      "translate": "corn_delight.advancement.corn_knowledge"
     },
     "description": {
-      "translate": "corn_delight.advancement.corn_knowleage.desc"
+      "translate": "corn_delight.advancement.corn_knowledge.desc"
     },
     "frame": "challenge",
     "show_toast": true,

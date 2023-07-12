@@ -1,21 +1,10 @@
-buildscript {
-    repositories {
-        // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
-        maven { url = 'https://maven.minecraftforge.net' }
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-    }
-}
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 plugins {
     id 'eclipse'
     id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '5.1.+'
 }
-apply plugin: 'net.minecraftforge.gradle'
 
-version = '1.0.6-1.18.2'
+version = '1.0.3-1.20.1'
 group = 'com.mcmod.corn_delight' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'corn_delight'
 
@@ -24,7 +13,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.18.2'
+    mappings channel: 'official', version: '1.20'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -90,15 +79,9 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.80'
-
-    implementation fg.deobf("cn.mcmod_mmf.mmlib:MMLib:1.1.3-1.18.2")
-    implementation fg.deobf("curse.maven:farmers-delight-398521:3999153")
-    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.4.166:api")
-    // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.4.166")
-    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.18.2-67:api")
-    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.18.2-67")
+    minecraft 'net.minecraftforge:forge:1.20.1-47.1.3'
+    implementation fg.deobf("cn.mcmod_mmf.mysterious_mountain_lib:MMLib:1.2.6-1.20")
+    implementation fg.deobf("curse.maven:farmers-delight-398521:4638874")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -129,4 +112,8 @@ publishing {
             url "file://${project.projectDir}/mcmodsrepo"
         }
     }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }

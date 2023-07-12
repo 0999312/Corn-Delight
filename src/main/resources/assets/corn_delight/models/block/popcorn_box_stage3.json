@@ -5,6 +5,7 @@
 		"particle": "corn_delight:block/popcorn",
 		"4": "corn_delight:block/popcorn"
 	},
+  	"render_type": "cutout",
 	"elements": [
 		{
 			"from": [3, 1, 3],

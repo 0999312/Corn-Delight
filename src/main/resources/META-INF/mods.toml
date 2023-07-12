@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[40,)"
+loaderVersion="[47,)"
 license="MIT License"
 
 [[mods]]
@@ -17,27 +17,27 @@ Now Corn in Farmer's Delight!
 [[dependencies.corn_delight]] 
     modId="forge"
     mandatory=true
-    versionRange="[40,)"
+    versionRange="[47,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.corn_delight]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.2,1.19)"
+    versionRange="[1.20,1.21)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.corn_delight]]
     modId="farmersdelight"
     mandatory=true
-    versionRange="[1.18.2-1.2.0,)"
+    versionRange="[1.20.1-1.2.2,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.corn_delight]]
-    modId="mmlib"
+    modId="mysterious_mountain_lib"
     mandatory=true
-    versionRange="[1.1.3-1.18.2,)"
+    versionRange="[1.2.6-1.20,)"
     ordering="AFTER"
     side="BOTH"
