@@ -1,13 +1,13 @@
 package cn.mcmod.corn_delight;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class CornDelightConfig {
-    public static ForgeConfigSpec COMMON_CONFIG;
-    public static ForgeConfigSpec.BooleanValue GENERATE_CORN_LOOT;
-    public static ForgeConfigSpec.BooleanValue VILLAGER_TRADE_CORN;
+    public static ModConfigSpec COMMON_CONFIG;
+    public static ModConfigSpec.BooleanValue GENERATE_CORN_LOOT;
+    public static ModConfigSpec.BooleanValue VILLAGER_TRADE_CORN;
     static {
-        ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
+    	ModConfigSpec.Builder COMMON_BUILDER = new ModConfigSpec.Builder();
         COMMON_BUILDER.comment("General settings").push("general");
         GENERATE_CORN_LOOT = COMMON_BUILDER
                 .comment("Should this mod add some of its items (CORN!!!) as extra chest loot across Minecraft?")

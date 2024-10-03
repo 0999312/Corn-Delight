@@ -1,0 +1,37 @@
+{
+  "values": {
+    "corn_delight:boiled_corn": {
+      "chance": 0.65
+    },
+    "corn_delight:corn": {
+      "chance": 0.65
+    },
+    "corn_delight:corn_seeds": {
+      "chance": 0.35
+    },
+    "corn_delight:cornbread": {
+      "chance": 0.85
+    },
+    "corn_delight:cornbread_batter": {
+      "chance": 0.85
+    },
+    "corn_delight:grilled_corn": {
+      "chance": 0.65
+    },
+    "corn_delight:popcorn": {
+      "chance": 0.5
+    },
+    "corn_delight:taco": {
+      "chance": 1.0
+    },
+    "corn_delight:tortilla": {
+      "chance": 0.75
+    },
+    "corn_delight:tortilla_raw": {
+      "chance": 0.75
+    },
+    "corn_delight:wild_corn": {
+      "chance": 0.55
+    }
+  }
+}

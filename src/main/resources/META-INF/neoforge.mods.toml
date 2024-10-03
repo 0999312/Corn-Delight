@@ -1,43 +1,44 @@
 modLoader="javafml"
-loaderVersion="[47,)"
-license="MIT License"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
 
 [[mods]]
-modId="corn_delight"
-version="${file.jarVersion}"
-displayName="Corn Delight"
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
 logoFile="logo.png"
 credits="Farmer's Delight Group"
-authors="MCMOD Modding Group"
+authors="${mod_authors}"
 description='''
 Do you like Corn?
 Now Corn in Farmer's Delight!
 '''
 
 [[dependencies.corn_delight]] 
-    modId="forge"
-    mandatory=true
-    versionRange="[47,)"
+    modId="neoforge" 
+    type="required" 
+    versionRange="${neo_version_range}" 
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.corn_delight]]
     modId="minecraft"
-    mandatory=true
-    versionRange="[1.20,1.21)"
+    type="required"
+    # This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.corn_delight]]
     modId="farmersdelight"
     mandatory=true
-    versionRange="[1.20.1-1.2.2,)"
+    versionRange="[1.2.4a,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.corn_delight]]
     modId="mysterious_mountain_lib"
     mandatory=true
-    versionRange="[1.2.6-1.20,)"
+    versionRange="[1.0.0-1.21,)"
     ordering="AFTER"
     side="BOTH"

@@ -5,6 +5,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 
 public class RandomPriceOrderItemListing implements ItemListing {
@@ -46,7 +47,7 @@ public class RandomPriceOrderItemListing implements ItemListing {
        int count = Math.min(pRand.nextInt(minCount, maxCount + 1), 64);
        itemstack.setCount(count);
        int j = Math.min(this.baseEmeraldCost + i, 64);
-       ItemStack itemstack1 = new ItemStack(Items.EMERALD, j);
+       ItemCost itemstack1 = new ItemCost(Items.EMERALD, j);
        return new MerchantOffer(itemstack1, itemstack, this.maxUses, this.villagerXp, this.priceMultiplier);
     }
 }
