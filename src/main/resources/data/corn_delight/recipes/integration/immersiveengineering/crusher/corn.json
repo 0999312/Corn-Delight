@@ -10,7 +10,7 @@
     {
       "chance": 1,
       "output": {
-        "item": "farmersdelight:straw"
+        "item": "corn_delight:corncob"
       }
     }
   ],

@@ -1,10 +1,11 @@
 plugins {
     id 'eclipse'
+    id 'idea'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
 
-version = '1.0.4-1.20.1'
+version = '1.1.8-1.20.1'
 group = 'com.mcmod.corn_delight' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'corn_delight'
 
@@ -13,7 +14,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.20'
+    mappings channel: 'official', version: '1.20.1'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -22,6 +23,7 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', 'corn_delight'
 			properties 'mixin.env.disableRefMap': 'true'
             mods {
                 corn_delight {
@@ -34,7 +36,23 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', 'corn_delight'
 			properties 'mixin.env.disableRefMap': 'true'
+            mods {
+                corn_delight {
+                    source sourceSets.main
+                }
+            }
+        }
+        
+        gameTestServer {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', 'corn_delight'
+			properties 'mixin.env.disableRefMap': 'true'
+
             mods {
                 corn_delight {
                     source sourceSets.main
@@ -80,8 +98,8 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.20.1-47.1.3'
-    implementation fg.deobf("cn.mcmod_mmf.mysterious_mountain_lib:MMLib:1.2.6-1.20")
-    implementation fg.deobf("curse.maven:farmers-delight-398521:4638874")
+    implementation fg.deobf("cn.mcmod_mmf.mysterious_mountain_lib:MMLib:1.5.22-1.20.1")
+    implementation fg.deobf("curse.maven:farmers-delight-398521:6597298")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
