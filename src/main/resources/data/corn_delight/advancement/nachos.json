@@ -1,0 +1,37 @@
+{
+  "parent": "corn_delight:tortilla",
+  "display": {
+    "icon": {
+      "id": "corn_delight:nachos_bowl"
+    },
+    "title": {
+      "translate": "corn_delight.advancement.nachos"
+    },
+    "description": {
+      "translate": "corn_delight.advancement.nachos.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:nachos_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item"
+    ]
+  ]
+}

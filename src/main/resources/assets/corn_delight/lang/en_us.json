@@ -25,6 +25,10 @@
   "item.corn_delight.tortilla": "Tortilla",
   "item.corn_delight.tortilla_chip": "Tortilla Chip",
   "item.corn_delight.tortilla_raw": "Raw Tortilla",
+
+  "item.corn_delight.corncob": "Corncob",
+  "item.corn_delight.cob_pipe": "Cob Pipe",
+
   "corn_delight.block.popcorn.bearhand": "Use your bare hand to grab popcorn.",
   "corn_delight.advancement.root": "Kernal of Knowledge",
   "corn_delight.advancement.root.desc": "Got some corn kernals",
@@ -48,6 +52,8 @@
   "corn_delight.advancement.taco.desc": "Got Taco",
   "corn_delight.advancement.nachos": "#nachocrime",
   "corn_delight.advancement.nachos.desc": "Got Nachos",
+  "corn_delight.advancement.macarthur": "General of the Maize",
+  "corn_delight.advancement.macarthur.desc": "Equiped MacArthur's Cob Pipe",
   "corn_delight.advancement.corn_knowledge": "Master Corn Knowledge",
   "corn_delight.advancement.corn_knowledge.desc": "Got every foods in Corn Delight, congratulations!"
 }

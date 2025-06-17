@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "c:seeds/corn"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "id": "corn_delight:caramel_popcorn"
+  },
+  "recipe_book_tab": "meals",
+  "experience": 0.35,
+  "cookingtime": 200
+}

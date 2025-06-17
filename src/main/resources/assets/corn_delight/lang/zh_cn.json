@@ -25,6 +25,10 @@
   "item.corn_delight.classic_corn_dog": "经典玉米热狗",
   "item.corn_delight.corn_dog": "玉米热狗",
   "item.corn_delight.caramel_popcorn": "焦糖爆米花",
+
+  "item.corn_delight.corncob": "玉米芯",
+  "item.corn_delight.cob_pipe": "玉米烟斗",
+
   "corn_delight.block.popcorn.bearhand": "你需要空手去抓爆米花。",
   "corn_delight.advancement.root": "知识的核心",
   "corn_delight.advancement.root.desc": "得到一些玉米粒，去种植玉米吧！",
@@ -48,6 +52,8 @@
   "corn_delight.advancement.taco.desc": "得到一份塔可",
   "corn_delight.advancement.nachos": "#nachocrime",
   "corn_delight.advancement.nachos.desc": "得到一份烤奶酪辣味玉米片",
+  "corn_delight.advancement.macarthur": "五星玉米学家",
+  "corn_delight.advancement.macarthur.desc": "装备上麦克阿瑟的玉米烟斗",
   "corn_delight.advancement.corn_knowledge": "究极的玉米知识",
   "corn_delight.advancement.corn_knowledge.desc": "获得了玉米乐事里所有的食物，恭喜你！"
 }

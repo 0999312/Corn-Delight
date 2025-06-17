@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "corn_delight:corn_seeds"
-  },
-  "result": "corn_delight:popcorn",
-  "experience": 0.5,
-  "cookingtime": 200
-}

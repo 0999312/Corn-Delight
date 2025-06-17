@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "ingredient": {
+    "item": "corn_delight:tortilla_raw"
+  },
+  "result": {
+    "count": 1,
+    "id" : "corn_delight:tortilla"
+  },
+  "experience": 0.5,
+  "cookingtime": 600
+}

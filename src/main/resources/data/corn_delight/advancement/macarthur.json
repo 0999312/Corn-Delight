@@ -1,0 +1,37 @@
+{
+  "parent": "corn_delight:corn",
+  "display": {
+    "icon": {
+      "id": "corn_delight:cob_pipe"
+    },
+    "title": {
+      "translate": "corn_delight.advancement.macarthur"
+    },
+    "description": {
+      "translate": "corn_delight.advancement.macarthur.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "cob_pipe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:cob_pipe"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cob_pipe"
+    ]
+  ]
+}

@@ -39,6 +39,6 @@ Now Corn in Farmer's Delight!
 [[dependencies.corn_delight]]
     modId="mysterious_mountain_lib"
     mandatory=true
-    versionRange="[1.0.0-1.21,)"
+    versionRange="[1.1.6-1.21.1,)"
     ordering="AFTER"
     side="BOTH"

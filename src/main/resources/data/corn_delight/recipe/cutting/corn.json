@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "tag": "c:crops/corn"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  },
+  "result": [
+    {
+      "item": {
+        "id": "corn_delight:corn_seeds",
+        "count": 2
+      }
+    },
+    {
+      "item": {
+        "id": "corn_delight:corncob"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "type": "immersiveengineering:crusher",
+  "secondaries": [
+    {
+      "chance": 0.5,
+      "output": {
+        "item": "immersiveengineering:dust_wood"
+      }
+    }
+  ],
+  "result": {
+    "id": "immersiveengineering:dust_wood",
+    "count": 1
+  },
+  "input": {
+    "item": "corn_delight:corncob"
+  },
+  "energy": 1600
+}

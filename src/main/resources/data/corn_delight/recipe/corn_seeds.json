@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:crops/corn"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "corn_delight:corn_seeds"
+  }
+}

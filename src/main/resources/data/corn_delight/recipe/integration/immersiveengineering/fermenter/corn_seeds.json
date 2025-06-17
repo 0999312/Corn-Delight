@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "type": "immersiveengineering:fermenter",
+  "fluid": {
+    "id": "immersiveengineering:ethanol",
+    "amount": 80
+  },
+  "input": {
+    "tag": "c:seeds/corn"
+  },
+  "energy": 6400
+}

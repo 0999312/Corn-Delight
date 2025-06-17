@@ -134,7 +134,6 @@ dependencies {
     runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
     compileOnly ("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     runtimeOnly ("vazkii.patchouli:Patchouli:${patchouli_version}")
-    implementation ("net.tracen.umapyoi:Umapyoi:1.0.0-1.21")
     implementation "maven.modrinth:farmers-delight:1.21.1-1.2.4a"
 }
 

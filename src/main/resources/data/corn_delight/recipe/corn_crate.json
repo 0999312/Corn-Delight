@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "www",
+    "www",
+    "www"
+  ],
+  "key": {
+    "w": {
+      "tag": "c:crops/corn"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "corn_delight:corn_crate"
+  }
+}

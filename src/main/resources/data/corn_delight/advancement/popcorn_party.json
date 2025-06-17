@@ -1,0 +1,37 @@
+{
+  "parent": "corn_delight:popcorn",
+  "display": {
+    "icon": {
+      "id": "corn_delight:popcorn_box"
+    },
+    "title": {
+      "translate": "corn_delight.advancement.popcorn_party"
+    },
+    "description": {
+      "translate": "corn_delight.advancement.popcorn_party.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corn_delight:popcorn_box"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item"
+    ]
+  ]
+}

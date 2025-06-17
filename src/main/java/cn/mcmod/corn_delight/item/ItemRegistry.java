@@ -37,6 +37,8 @@ public class ItemRegistry {
     public static final DeferredItem<BlockItem> POPCORN_BOX = ITEMS.register("popcorn_box",
             () -> new BlockItem(BlockRegistry.POPCORN_BOX.get(), CornDelight.defaultItemProperties()));
     
+    
+    
     public static final DeferredItem<ItemFoodBase> CORN = register("corn", ()->food(
             FoodInfo.builder().name("corn")
             .amountAndCalories(2, 0.2F).water(5F)
@@ -44,6 +46,9 @@ public class ItemRegistry {
             .heatCapacity(1F).cookingTemp(480F)
             .build())
     );
+    
+    public static final DeferredItem<Item> CORNCOB = ITEMS.register("corncob",
+            () -> new Item(CornDelight.defaultItemProperties()));
     
     public static final DeferredItem<ItemFoodSeeds> CORN_SEEDS = register("corn_seeds", 
             ()->seed(BlockRegistry.CORN_CROP.get(),
@@ -196,6 +201,11 @@ public class ItemRegistry {
             .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, FoodValues.LONG_DURATION, 0), 1.0F)
             .build(), Items.BOWL)
     );
+    
+    
+    public static final DeferredItem<Item> COB_PIPE = ITEMS.register("cob_pipe",
+            () -> new CobPipeItem(CornDelight.defaultItemProperties()));
+    
     
     private static ItemFoodBase food(FoodInfo info) {
         return new ItemFoodBase(CornDelight.defaultItemProperties(), info);

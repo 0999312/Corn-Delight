@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "item": "corn_delight:cornbread_batter"
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+      {
+        "tag": "c:foods/cooked_chicken"
+      },
+      {
+        "tag": "c:foods/cooked_pork"
+      },
+      {
+        "tag": "c:foods/cooked_beef"
+      },
+      {
+        "tag": "c:foods/cooked_mutton"
+      }
+    ]
+    }
+  ],
+  "result": {
+    "id": "corn_delight:corn_dog"
+  },
+  "recipe_book_tab": "meals",
+  "experience": 0.5,
+  "cookingtime": 100
+}

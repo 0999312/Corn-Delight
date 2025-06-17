@@ -1,52 +1,52 @@
 {
-  "variants": {
-    "age=0,upper=false": {
-      "model": "corn_delight:block/corn_crop_stage0"
-    },
-    "age=1,upper=false": {
-      "model": "corn_delight:block/corn_crop_stage1"
-    },
-    "age=2,upper=false": {
-      "model": "corn_delight:block/corn_crop_stage2"
-    },
-    "age=3,upper=false": {
-      "model": "corn_delight:block/corn_crop_stage3"
-    },
-    "age=4,upper=false": {
-      "model": "corn_delight:block/corn_crop_stage4"
-    },
-    "age=5,upper=false": {
-      "model": "corn_delight:block/corn_crop_stage5"
-    },
-    "age=6,upper=false": {
-      "model": "corn_delight:block/corn_crop_stage6"
-    },
-    "age=7,upper=false": {
-      "model": "corn_delight:block/corn_crop_stage7"
-    },
-    "age=0,upper=true": {
-      "model": "corn_delight:block/corn_crop_stage0"
-    },
-    "age=1,upper=true": {
-      "model": "corn_delight:block/corn_crop_stage1"
-    },
-    "age=2,upper=true": {
-      "model": "corn_delight:block/corn_crop_stage2"
-    },
-    "age=3,upper=true": {
-      "model": "corn_delight:block/corn_crop_stage3"
-    },
-    "age=4,upper=true": {
-      "model": "corn_delight:block/corn_crop_stage4"
-    },
-    "age=5,upper=true": {
-      "model": "corn_delight:block/corn_crop_stage5"
-    },
-    "age=6,upper=true": {
-      "model": "corn_delight:block/corn_crop_stage6"
-    },
-    "age=7,upper=true": {
-      "model": "corn_delight:block/corn_crop_stage7"
+    "variants": {
+        "age=0,upper=false": {
+            "model": "corn_delight:block/corn_crop_stage0"
+        },
+        "age=1,upper=false": {
+            "model": "corn_delight:block/corn_crop_stage1"
+        },
+        "age=2,upper=false": {
+            "model": "corn_delight:block/corn_crop_stage2"
+        },
+        "age=3,upper=false": {
+            "model": "corn_delight:block/corn_crop_stage3"
+        },
+        "age=4,upper=false": {
+            "model": "corn_delight:block/corn_crop_stage4"
+        },
+        "age=5,upper=false": {
+            "model": "corn_delight:block/corn_crop_stage5"
+        },
+        "age=6,upper=false": {
+            "model": "corn_delight:block/corn_crop_stage6"
+        },
+        "age=7,upper=false": {
+            "model": "corn_delight:block/corn_crop_stage7"
+        },
+        "age=0,upper=true": {
+            "model": "corn_delight:block/corn_top_stage0"
+        },
+        "age=1,upper=true": {
+            "model": "corn_delight:block/corn_top_stage1"
+        },
+        "age=2,upper=true": {
+            "model": "corn_delight:block/corn_top_stage2"
+        },
+        "age=3,upper=true": {
+            "model": "corn_delight:block/corn_top_stage3"
+        },
+        "age=4,upper=true": {
+            "model": "corn_delight:block/corn_top_stage4"
+        },
+        "age=5,upper=true": {
+            "model": "corn_delight:block/corn_top_stage5"
+        },
+        "age=6,upper=true": {
+            "model": "corn_delight:block/corn_top_stage6"
+        },
+        "age=7,upper=true": {
+            "model": "corn_delight:block/corn_top_stage7"
+        }
     }
-  }
 }

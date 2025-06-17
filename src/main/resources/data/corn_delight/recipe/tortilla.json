@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": {
+    "item": "corn_delight:tortilla_raw"
+  },
+  "result": {
+    "id": "corn_delight:tortilla"
+  },
+  "experience": 0.5,
+  "cookingtime": 200
+}

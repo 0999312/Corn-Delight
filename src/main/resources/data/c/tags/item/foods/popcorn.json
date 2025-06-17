@@ -1,0 +1,9 @@
+{
+  "values": [
+    "corn_delight:popcorn",
+    {
+      "id": "culturaldelights:popcorn",
+      "required": false
+    }
+  ]
+}

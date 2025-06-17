@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:rods/wood"
+    },
+    {
+      "item": "corn_delight:corncob"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "corn_delight:cob_pipe"
+  }
+}

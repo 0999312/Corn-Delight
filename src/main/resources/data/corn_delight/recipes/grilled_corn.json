@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "corn_delight:corn"
-  },
-  "result": "corn_delight:grilled_corn",
-  "experience": 0.5,
-  "cookingtime": 200
-}

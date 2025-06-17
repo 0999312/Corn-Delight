@@ -1,10 +1,10 @@
 {
   "conditions": [
     {
-      "condition": "forge:loot_table_id",
+      "condition": "neoforge:loot_table_id",
       "loot_table_id": "minecraft:chests/shipwreck_supply"
     }
   ],
   "lootTable": "corn_delight:shipwreck_supply",
-  "type": "mmlib:add_loot_table"
+  "type": "mysterious_mountain_lib:add_loot_table"
 }

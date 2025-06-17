@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "item": "corn_delight:cornbread"
+    },
+    {
+      "tag": "c:foods/vegetables"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    }
+  ],
+  "result": {
+    "id": "corn_delight:cornbread_stuffing"
+  },
+  "recipe_book_tab": "meals",
+  "experience": 0.5,
+  "cookingtime": 200
+}

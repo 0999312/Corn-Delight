@@ -15,6 +15,9 @@
     "corn_delight:cornbread_batter": {
       "chance": 0.85
     },
+    "corn_delight:corncob": {
+      "chance": 0.25
+    },
     "corn_delight:grilled_corn": {
       "chance": 0.65
     },

@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.DataMapProvider;
 import net.neoforged.neoforge.registries.datamaps.builtin.Compostable;
+import net.neoforged.neoforge.registries.datamaps.builtin.FurnaceFuel;
 import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 
 public class DataMaps extends DataMapProvider{
@@ -18,6 +19,7 @@ public class DataMaps extends DataMapProvider{
 	protected void gather() {
 		builder(NeoForgeDataMaps.COMPOSTABLES)
 		.add(ItemRegistry.CORN_SEEDS, new Compostable(0.35F), false)
+		.add(ItemRegistry.CORNCOB, new Compostable(0.25F), false)
 		.add(ItemRegistry.POPCORN, new Compostable(0.5F), false)
 		.add(ItemRegistry.WILD_CORN, new Compostable(0.55F), false)
 		.add(ItemRegistry.CORN, new Compostable(0.65F), false)
@@ -29,5 +31,7 @@ public class DataMaps extends DataMapProvider{
 		.add(ItemRegistry.CORNBREAD, new Compostable(0.85F), false)
 		.add(ItemRegistry.TACO, new Compostable(1F), false)
 		;
+		builder(NeoForgeDataMaps.FURNACE_FUELS)
+		.add(ItemRegistry.CORNCOB, new FurnaceFuel(100), false);
 	}
 }

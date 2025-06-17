@@ -1,0 +1,14 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "c:crops/corn"
+    }
+  ],
+  "result": {
+    "id": "corn_delight:boiled_corn"
+  },
+  "recipe_book_tab": "meals",
+  "experience": 0.15,
+  "cookingtime": 100
+}

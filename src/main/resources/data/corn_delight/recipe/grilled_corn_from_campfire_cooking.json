@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "ingredient": {
+    "item": "corn_delight:corn"
+  },
+  "result": {
+    "count": 1,
+    "id": "corn_delight:grilled_corn"
+  },
+  "experience": 0.5,
+  "cookingtime": 600
+}
