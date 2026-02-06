@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "c:rods/wood"
+      "tag": "c:rods/wooden"
     },
     {
       "item": "corn_delight:corncob"
