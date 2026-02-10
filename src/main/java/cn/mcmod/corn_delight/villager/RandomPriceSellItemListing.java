@@ -44,9 +44,8 @@ public class RandomPriceSellItemListing implements ItemListing {
     public MerchantOffer getOffer(Entity pTrader, RandomSource pRand) {
        int j = Math.min(this.baseEmeraldCost, 64);
        ItemStack itemstack = itemStack.copy();
-       ItemCost cost = new ItemCost(itemstack.getItem(), itemstack.getCount());
        int count = Math.min(pRand.nextInt(minCount, maxCount + 1), 64);
-       itemstack.setCount(count);
+        ItemCost cost = new ItemCost(itemstack.getItem(), count);
        ItemStack itemstack1 = new ItemStack(Items.EMERALD, j);
        return new MerchantOffer(cost, itemstack1, this.maxUses, this.villagerXp, this.priceMultiplier);
     }
