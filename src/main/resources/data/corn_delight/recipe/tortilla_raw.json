@@ -1,20 +1,4 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "pattern": [
-    "www",
-    " b "
-  ],
-  "key": {
-    "w": {
-      "tag": "c:crops/corn"
-    },
-    "b": {
-      "item": "minecraft:water_bucket"
-    }
-  },
-  "result": {
-    "id": "corn_delight:tortilla_raw",
-    "count": 3
-  }
+  "type": "corn_delight:tortilla",
+  "category": "misc"
 }
