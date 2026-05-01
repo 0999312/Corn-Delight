@@ -18,7 +18,7 @@ import vectorwing.farmersdelight.common.Configuration;
 public class VillagerTradeHandler {
     @SubscribeEvent
     public static void onVillagerTrades(VillagerTradesEvent event) {
-        if (!Configuration.FARMERS_BUY_FD_CROPS.get()) return;
+        if (!Configuration.ENABLE_FARMERS_BUY_FD_CROPS.get()) return;
         if (!CornDelightConfig.VILLAGER_TRADE_CORN.get()) return;
         addVillageTrade(event, "farmer", 1,
                 new RandomPriceSellItemListing(new ItemStack(ItemRegistry.CORN.get()), 1, 16, 32, 16, 2));
