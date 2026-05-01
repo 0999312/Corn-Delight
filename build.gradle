@@ -108,7 +108,7 @@ dependencies {
     // Use the full Curios API jar at runtime
     runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1"))
     
-    implementation fg.deobf("curse.maven:farmers-delight-398521:6597298")
+    implementation fg.deobf("curse.maven:farmers-delight-398521:8007609")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
