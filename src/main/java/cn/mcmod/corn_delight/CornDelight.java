@@ -17,8 +17,8 @@ import com.mojang.logging.LogUtils;
 
 import cn.mcmod.corn_delight.block.BlockRegistry;
 import cn.mcmod.corn_delight.item.ComposterRegistry;
+import cn.mcmod.corn_delight.item.FDFoodItem;
 import cn.mcmod.corn_delight.item.ItemRegistry;
-import cn.mcmod_mmf.mmlib.item.ItemFoodBase;
 import cn.mcmod_mmf.mmlib.utils.VillagerUtils;
 
 @Mod(CornDelight.MODID)
@@ -43,7 +43,7 @@ public class CornDelight {
         });
     }
     
-    private void addFoodToVillage(Supplier<ItemFoodBase> corn, int i) {
+    private void addFoodToVillage(Supplier<FDFoodItem> corn, int i) {
 		VillagerUtils.addFoodToVillage(corn.get(), i);
 	}
 

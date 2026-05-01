@@ -23,16 +23,16 @@ public class CobPipeItem extends Item implements Equipable {
 	public EquipmentSlot getEquipmentSlot() {
 		return EquipmentSlot.HEAD;
 	}
-	
+
 	@Override
 	public SoundEvent getEquipSound() {
 		return SoundEvents.GRASS_PLACE;
 	}
-	
+
 	@Override
 	public @Nullable ICapabilityProvider initCapabilities(ItemStack stack, @Nullable CompoundTag nbt) {
-		if(!stack.isEmpty()){
-			if(CuriosCompat.isLoaded())
+		if (!stack.isEmpty()) {
+			if (CuriosCompat.isLoaded())
 				return new CobpipeCapProvider(stack);
 		}
 		return super.initCapabilities(stack, nbt);

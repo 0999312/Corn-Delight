@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
+    "particle": "corn_delight:block/corn_crate_side",
     "side": "corn_delight:block/corn_crate_side",
     "bottom": "farmersdelight:block/crate_bottom",
     "top": "corn_delight:block/corn_crate_top"

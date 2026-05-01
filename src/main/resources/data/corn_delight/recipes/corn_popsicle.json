@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "tag": "forge:rods/wooden"
+    },
+    "i": {
+      "item": "minecraft:ice"
+    },
+    "m": {
+      "item": "forge:crops/corn"
+    }
+  },
+  "pattern": [
+    "  m",
+    "im ",
+    "-i "
+  ],
+  "result": {
+    "count": 1,
+    "item": "corn_delight:corn_popsicle"
+  }
+}

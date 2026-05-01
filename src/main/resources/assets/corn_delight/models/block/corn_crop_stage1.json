@@ -1,7 +1,32 @@
 {
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "corn_delight:block/corn_crop_stage1"
-  },
-  "render_type": "cutout"
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/crop",
+	"render_type": "cutout",
+	"textures": {
+		"particle": "corn_delight:block/corn_crop_stage1",
+		"crop": "corn_delight:block/corn_crop_stage1"
+	},
+	"elements": [
+		{
+			"from": [0.8, -1, 8],
+			"to": [15.2, 15, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#crop"}
+			}
+		},
+		{
+			"from": [8, -1, 0.8],
+			"to": [8, 15, 15.2],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#crop"}
+			}
+		}
+	]
 }
