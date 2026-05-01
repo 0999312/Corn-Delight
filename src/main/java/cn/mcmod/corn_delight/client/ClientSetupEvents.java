@@ -3,16 +3,19 @@ package cn.mcmod.corn_delight.client;
 import java.util.Map;
 
 import cn.mcmod.corn_delight.CornDelight;
+import cn.mcmod.corn_delight.compat.curios.CuriosCompat;
 import cn.mcmod.corn_delight.item.ItemRegistry;
 import cn.mcmod_mmf.mmlib.client.model.MultiModelBakedModel;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @EventBusSubscriber(bus = Bus.MOD, modid = CornDelight.MODID, value = Dist.CLIENT)
 public class ClientSetupEvents {
@@ -30,4 +33,11 @@ public class ClientSetupEvents {
 
 		event.register(new ModelResourceLocation(CornDelight.MODID, "cob_pipe_model", "inventory"));
 	}
+	
+    @OnlyIn(Dist.CLIENT)
+    @SubscribeEvent
+    public static void setupClient(FMLClientSetupEvent event) {
+    	if(CuriosCompat.isLoaded())
+    		CuriosCompat.initClient();
+    }
 }

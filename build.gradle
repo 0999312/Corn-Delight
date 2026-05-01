@@ -5,7 +5,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
 
-version = '1.1.8-1.20.1'
+version = '1.1.9-1.20.1'
 group = 'com.mcmod.corn_delight' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'corn_delight'
 
@@ -86,6 +86,10 @@ repositories {
     maven { url = "https://dvs1.progwml6.com/files/maven" }
     // Patchouli
     maven { url = 'https://maven.blamejared.com' }
+    
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
     // Curse Forge
     maven {
         url = "https://www.cursemaven.com"
@@ -99,6 +103,11 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.20.1-47.1.3'
     implementation fg.deobf("cn.mcmod_mmf.mysterious_mountain_lib:MMLib:1.5.22-1.20.1")
+    // Compile against only the API artifact
+    compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1:api"))
+    // Use the full Curios API jar at runtime
+    runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1"))
+    
     implementation fg.deobf("curse.maven:farmers-delight-398521:6597298")
 }
 

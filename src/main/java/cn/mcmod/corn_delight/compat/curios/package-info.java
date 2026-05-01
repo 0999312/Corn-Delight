@@ -1,0 +1,1 @@
+package cn.mcmod.corn_delight.compat.curios;
